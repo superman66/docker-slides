@@ -1,0 +1,28 @@
+meta:
+  title:
+  thumbnail:
+  description:
+  sns:
+    - twitter
+slide:
+  loop: true
+  sidebar: true
+  targetBlank: true
+  showIndex: true
+  isVertical: false
+  code:
+    languages:
+      - javascript
+      - json
+      - markdown
+      - css
+    plugins: []
+    theme: twilight
+  chart: false
+  math: false
+extends:
+  js:
+  css: ./style.css
+  webpack:
+build:
+  ssr: true

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "npx fusuma start"
+  },
   "devDependencies": {
-    "fusuma": "^1.14.2"
+    "fusuma": "^1.14.2",
+    "styled-components": "^4.3.1"
   }
 }

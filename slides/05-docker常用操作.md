@@ -161,7 +161,7 @@ docker volume ls	// 查看所有数据卷
 docker volume inspect my-local-vol
 ```
 
-创建完数据卷后，就可以在启动容器的时候使用 `--mount` 将其挂载到容器里。
+创建完数据卷后，就可以在启动容器的时候使用 `--mount` 或者 `--volume` 将其挂载到容器里。
 
 以前面 nginx 为例：
 
@@ -171,15 +171,15 @@ docker run --name mynginx -d -P --mount source=my-local-vol,target=/test nginx
 
 
 ---
-## 挂载主机目录
+## 挂载主机目录\文件
 
-无需创建数据卷，直接将本地主机的目录挂载到容器里。
+无需创建数据卷，直接将本地主机的目录或者文件挂载到容器里。
 
 ```bash
-docker run --name mynginx -d -P --mount type=bind,source=./nginx/default.conf,target=/etc/nginx/conf.d/default.conf nginx 
+docker run --name mynginx -d -P --mount type=bind,source=/path/xxx/nginx.conf,target=/etc/nginx/conf.d/default.conf nginx 
 ```
 
-上面命令就会启动一个挂载了本地nginx.conf 配置文件的 nginx 容器。
+上面命令就会启动一个挂载了本地 nginx.conf 配置文件的 nginx 容器。
 
 
 
